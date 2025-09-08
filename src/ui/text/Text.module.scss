@@ -1,0 +1,55 @@
+.text {
+  font-family: 'NotoSans', sans-serif;
+}
+
+.sizeStandard {
+  font-size: var(--font-size-main);
+}
+
+.sizeTitle {
+  font-size: var(--font-size-title);
+}
+
+.sizeBig {
+  font-size: var(--font-size-big);
+}
+
+.sizeLarge {
+  font-size: var(--font-size-large);
+}
+
+.sizeSmall {
+  font-size: var(--font-size-small);
+}
+
+.weightLight {
+  font-weight: 300;
+}
+
+.weightRegular {
+  font-weight: 400;
+}
+
+.weightMedium {
+  font-weight: 500;
+}
+
+.weightSemibold {
+  font-weight: 600;
+}
+
+.weightBold {
+  font-weight: 700;
+}
+
+.colorMain {
+  color: var(--main-text-color);
+}
+
+.colorSecondary {
+  color: var(--secondary-color);
+}
+
+.colorInvert {
+  color: var(--main-color);
+}

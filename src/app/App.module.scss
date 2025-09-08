@@ -1,0 +1,11 @@
+.app {
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--gradient-main);
+  padding-top: 40px;
+
+  .content {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}

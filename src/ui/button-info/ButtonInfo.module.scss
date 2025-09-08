@@ -1,0 +1,18 @@
+.button {
+  padding: 12px 18px;
+  background: var(--gradient-ui);
+  border: none;
+  border-radius: var(--border-radius);
+  transition: all .3s ease-in-out;
+}
+
+.button :first-child {
+  color: var(--main-color);
+  transition: all .3s ease-in-out;
+}
+
+.button:hover :first-child {
+  transform-origin: center;
+  transform: scale(1.05);
+}
+
