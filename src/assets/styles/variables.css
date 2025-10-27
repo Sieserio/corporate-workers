@@ -12,6 +12,7 @@
 
     --gradient-main: linear-gradient(to bottom, var(--main-color-dark),var(--main-color-darkest), var(--secondary-color-lighter));
     --gradient-ui: linear-gradient(to bottom, var(--secondary-color-lightest),var(--secondary-color-light), var(--secondary-color-dark));
+    --gradient-ui-hover: linear-gradient(to bottom, var(--secondary-color),var(--secondary-color-light), var(--secondary-color-dark));
 
     --font-size-main: 16px;
     --font-size-title: 20px;
@@ -20,4 +21,6 @@
     --font-size-small: 14px;
 
     --border-radius: 10px;
+
+    --transition-standart:  .2s ease-in-out
 }
