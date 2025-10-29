@@ -3,7 +3,7 @@ import styles from './ButtonInfo.module.scss';
 
 export const ButtonInfo = ({
     children,
-    onClick
+    onClick,
 }: ButtonInfoProps) => {
     return (
         <button onClick={onClick} className={styles.button}>

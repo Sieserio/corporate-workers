@@ -1,5 +1,6 @@
 :root {
     --main-color: #FFFFFF;
+    --main-color-04: rgba(255, 255, 255, 0.4);
     --main-color-dark: #F6F5FF;
     --main-color-darkest: #F0F0FF;
     --main-text-color: #1E1584;
@@ -7,6 +8,7 @@
     --secondary-color: #524E7D;
     --secondary-color-light: #7B6FFF;
     --secondary-color-lighter: #7265FB;
+    --secondary-color-lighter-01: rgba(114, 101, 251, 0.1);
     --secondary-color-lightest: #ACA4FF;
     --secondary-color-dark: #5242FF;
 

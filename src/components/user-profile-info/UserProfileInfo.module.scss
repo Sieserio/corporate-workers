@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 320px;
+  background-color: var(--main-color);
+  padding: 40px 20px;
+  border-radius: var(--border-radius);
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    &_img {
+      min-width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 1px solid var(--main-text-color);
+      overflow: hidden;
+
+      :first-child {
+        width: 100%;
+      }
+    }
+
+    &_text {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  .level {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10%;
+
+    &_coin {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
