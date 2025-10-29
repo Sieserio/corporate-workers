@@ -4,6 +4,7 @@ import {Link, useLocation} from "react-router-dom";
 import {ButtonNav} from "../../ui/button-nav/ButtonNav.tsx";
 import IconMain from "../../assets/images/icons/ui/mainSection.svg";
 import IconProfile from "../../assets/images/icons/ui/profileSection.svg";
+import IconCoin from "../../assets/images/icons/ui/coin.svg";
 
 export function UserProfileInfo() {
     const location = useLocation();
@@ -15,7 +16,7 @@ export function UserProfileInfo() {
         <div className={styles.container}>
             <div className={styles.avatar}>
                 <div className={styles.avatar_img}>
-                    <img src='../../../public/vite.svg'/>
+                    <img src='../../../public/vite.svg' alt='dd'/>
                 </div>
 
                 <div className={styles.avatar_text}>
@@ -28,7 +29,7 @@ export function UserProfileInfo() {
                 <Text tag={"p"} size={"Title"} color={'Main'} weight={'Bold'}>1 уровень</Text>
                 <div className={styles.level_coin}>
                     <Text tag={"p"} size={'Standard'} color={'Main'}> | </Text>
-                    <img src='../../../public/vite.svg'/>
+                    <IconCoin/>
                     <Text tag={"p"} size={"Title"} color={'Main'} weight={'Bold'}>1345</Text>
                 </div>
             </div>

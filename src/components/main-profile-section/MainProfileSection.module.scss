@@ -1,0 +1,115 @@
+.section {
+  display: grid;
+  grid-template-columns: auto 320px;
+  gap: 20px;
+
+  .container_main {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  .container_aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__carma, &__goal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      gap: 20px;
+      padding: 40px 25px 30px 25px;
+      background: var(--main-color);
+      border-radius: var(--border-radius);
+
+      &_coin {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+
+        .icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    &__carma::before , &__goal::before {
+      content: '';
+      background: var(--gradient-ui);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    &__carma::before {
+      height: 80px;
+    }
+
+    &__goal::before {
+      height: 100px;
+    }
+
+    &__goal {
+
+      &_img {
+        position: relative;
+      }
+
+      &_img::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 10%;
+        width: 80%;
+        height: 15px;
+        background: radial-gradient(ellipse, rgba(82, 66, 255, 0.4) 0%, transparent 70%);
+        z-index: -1;
+      }
+
+      &_text_wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .container_aside__goal_text {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          gap: 5px;
+
+          &_progress {
+            z-index: 1;
+            color: var(--main-color);
+          }
+
+          .wrapperPosition {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+
+        .container_aside__goal_icon {
+          z-index: 1;
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+  }
+}
