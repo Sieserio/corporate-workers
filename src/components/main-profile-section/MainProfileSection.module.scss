@@ -15,9 +15,36 @@
     }
   }
 
+  .progress_table {
+    max-height: 645px;
+    width: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+    padding: 32px 14px 14px;
+    background-color: var(--main-color);
+    border-radius: var(--border-radius);
+
+    &__title {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: 40px 1fr 1fr 1fr 1fr;
+      margin-bottom: 30px;
+      padding: 0 20px;
+    }
+
+    &__task_list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      overflow-y: auto;
+    }
+  }
+
   .container_aside {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 20px;
 
     &__carma, &__goal {

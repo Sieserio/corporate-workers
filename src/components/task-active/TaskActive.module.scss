@@ -1,0 +1,34 @@
+.task {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 15px;
+  padding: 25px 20px;
+  border: 1px solid var(--secondary-color-lightest);
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color-lighter-01);
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-ui);
+    border-radius: var(--border-radius);
+
+  }
+
+  &__reward {
+    display: flex;
+    flex-direction: column;
+
+    &_num {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+
+}
