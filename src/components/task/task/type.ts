@@ -1,4 +1,4 @@
-export interface TaskActiveProps {
+export interface TaskProps {
     id: number,
     description: string,
     reward: {

@@ -1,6 +1,6 @@
 export interface ButtonNavProps {
     children?: React.ReactNode;
-    active?: string;
+    active?: boolean;
     text: string;
     onClick?: () => void;
 }

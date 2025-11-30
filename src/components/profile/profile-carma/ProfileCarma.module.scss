@@ -1,0 +1,36 @@
+.carma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  gap: 20px;
+  padding: 40px 25px 30px 25px;
+  background: var(--main-color);
+  border-radius: var(--border-radius);
+
+
+
+  &_coin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    .icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.carma::before {
+  content: '';
+  background: var(--gradient-ui);
+  position: absolute;
+  height: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}

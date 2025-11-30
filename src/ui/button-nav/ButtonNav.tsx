@@ -3,13 +3,13 @@ import styles from './ButtonNav.module.scss';
 import {Text} from "../text/Text.tsx";
 
 export function ButtonNav({
-    active = '',
+    active = false,
     text = '',
     onClick,
     children
 }:ButtonNavProps) {
     return (
-        <button className={`${styles.button} ${styles[active]}`} onClick={onClick}>
+        <button className={`${styles.button} ${active? styles.active : ''}`} onClick={onClick}>
             {children && <div className={styles.button_icon_wrapper}>
                 {children}
             </div>}

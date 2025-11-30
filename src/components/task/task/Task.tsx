@@ -1,15 +1,15 @@
-import styles from './TaskActive.module.scss';
-import type {TaskActiveProps} from "./type.ts";
-import {Text} from "../../ui/text/Text.tsx";
-import IconCoin from '../../assets/images/icons/ui/coin.svg';
-import IconCarma from '../../assets/images/icons/ui/carma.svg';
-export function TaskActive({
+import styles from './Task.module.scss';
+import type {TaskProps} from "./type.ts";
+import {Text} from "../../../ui/text/Text.tsx";
+import IconCoin from '../../../assets/images/icons/ui/coin.svg';
+import IconCarma from '../../../assets/images/icons/ui/carma.svg';
+export function Task({
     id,
     description,
     reward,
     progress,
     time
-}: TaskActiveProps) {
+}: TaskProps) {
 
     return (
         <div className={styles.task}>
