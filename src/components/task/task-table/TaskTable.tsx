@@ -1,9 +1,13 @@
 import styles from "./TaskTable.module.scss";
 import {Text} from "../../../ui/text/Text.tsx";
-import type {TaskTableProps} from "./type.ts";
 import {TaskList} from "../task-list/TaskList.tsx";
+import type {ITask} from "../../../types";
 
-export function TaskTable({tasks}:TaskTableProps) {
+interface TaskTableProps {
+    tasks: ITask[];
+}
+
+export function TaskTable({tasks}: TaskTableProps) {
     return (
         <div className={styles.table}>
             <div className={styles.table__title}>

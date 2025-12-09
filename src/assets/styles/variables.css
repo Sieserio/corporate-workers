@@ -12,9 +12,17 @@
     --secondary-color-lightest: #ACA4FF;
     --secondary-color-dark: #5242FF;
 
+    --color-ui-done-light: #26E27C;
+    --color-ui-done-lightest: #15D36C;
+    --color-ui-cancel-light: #FF87C1;
+    --color-ui-cancel-dark: #FF1D45;
+
     --gradient-main: linear-gradient(to bottom, var(--main-color-dark),var(--main-color-darkest), var(--secondary-color-lighter));
     --gradient-ui: linear-gradient(to bottom, var(--secondary-color-lightest),var(--secondary-color-light), var(--secondary-color-dark));
     --gradient-ui-hover: linear-gradient(to bottom, var(--secondary-color),var(--secondary-color-light), var(--secondary-color-dark));
+
+    --gradient-ui-done: linear-gradient(to bottom, var(--color-ui-done-light),var(--color-ui-done-lightest));
+    --gradient-ui-cancel: linear-gradient(to bottom, var(--color-ui-cancel-light),var(--color-ui-cancel-dark));
 
     --font-size-main: 16px;
     --font-size-title: 20px;

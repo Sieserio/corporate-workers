@@ -15,7 +15,7 @@ export function TaskFilter({
             />
             <ButtonNav
                 active={activeFilter === 'done'}
-                text='Выполненные'
+                text='Завершенные'
                 onClick={()=> onChangeFilter("done")}
             />
         </div>

@@ -9,9 +9,6 @@ import IconCoin from "../../assets/images/icons/ui/coin.svg";
 export function UserProfileInfo() {
     const location = useLocation();
 
-    const isMainSection = location.pathname === "/userProfile";
-    const isInfoSection = location.pathname === "/userProfile/info";
-
     return (
         <div className={styles.container}>
             <div className={styles.avatar}>
@@ -36,12 +33,12 @@ export function UserProfileInfo() {
 
             <div className={styles.navigation}>
                 <Link to={'/userProfile'}>
-                    <ButtonNav active={isMainSection? 'active' : ''} text='Главная'>
+                    <ButtonNav active={location.pathname === "/userProfile"} text='Главная'>
                         <IconMain width={24} height={24} />
                     </ButtonNav>
                 </Link>
                 <Link to={'/userProfile/info'}>
-                    <ButtonNav active={isInfoSection? 'active' : ''} text='Профиль'>
+                    <ButtonNav active={location.pathname === "/userProfile/info"} text='Профиль'>
                         <IconProfile width={24} height={24} />
                     </ButtonNav>
                 </Link>
