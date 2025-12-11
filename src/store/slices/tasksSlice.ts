@@ -1,6 +1,6 @@
-import type {ITask} from "../types";
+import type {ITask} from "../../types";
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {taskService} from "../services/MockTaskService.ts";
+import {taskService} from "../../services/MockTaskService.ts";
 
 interface TasksState {
     items: ITask[],
@@ -25,7 +25,9 @@ const tasksSlice = createSlice({
     name: "tasks",
     initialState,
     reducers: {},
-
+    selectors: {
+        getTasks: (state) => state.items
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchTasks.pending, (state) => {
@@ -43,4 +45,5 @@ const tasksSlice = createSlice({
     },
 })
 
+export const {getTasks} = tasksSlice.selectors;
 export default tasksSlice.reducer;

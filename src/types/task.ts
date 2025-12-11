@@ -1,7 +1,7 @@
 type state = 'active' | 'done' | 'cancel'
 
 export interface ITask {
-    id: number,
+    id: string,
     description: string,
     extraInfo: string,
     state: state,

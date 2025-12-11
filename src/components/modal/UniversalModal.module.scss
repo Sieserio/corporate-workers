@@ -1,0 +1,42 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+
+  .dialog {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 130px;
+    background: var(--gradient-background);
+    border-radius: var(--border-radius);
+
+    .closeButton {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 70px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: 1px solid var(--main-text-color);
+      border-radius: var(--border-radius);
+
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+  }
+
+}

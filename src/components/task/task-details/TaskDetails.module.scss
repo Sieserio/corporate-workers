@@ -1,0 +1,51 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  .task {
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 20px;
+    border-bottom: 1px solid var(--secondary-color-lightest);
+
+    &__state {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: var(--border-radius);
+    }
+
+    &__active {
+      background: var(--gradient-ui);
+    }
+
+    &__done {
+      background: var(--gradient-ui-done);
+    }
+
+    &__cancel {
+      background: var(--gradient-ui-cancel);
+    }
+
+    &__reward {
+      display: flex;
+      flex-direction: column;
+
+      &_num {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+
+}
+
+

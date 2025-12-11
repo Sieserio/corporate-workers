@@ -1,39 +1,35 @@
-import styles from './Task.module.scss';
+import styles from "./TaskDetails.module.scss";
 import {Text} from "../../../ui/text/Text.tsx";
-import IconCoin from '../../../assets/images/icons/ui/coin.svg';
-import IconCarma from '../../../assets/images/icons/ui/carma.svg';
+import DoneIcon from "../../../assets/images/icons/ui/done.svg";
+import CancelIcon from "../../../assets/images/icons/ui/cancel.svg";
+import IconCoin from "../../../assets/images/icons/ui/coin.svg";
+import IconCarma from "../../../assets/images/icons/ui/carma.svg";
+import {useParams} from "react-router-dom";
+import {useSelector} from "react-redux";
+import {getTasks} from "../../../store/slices/tasksSlice.ts";
 import type {ITask} from "../../../types";
-import DoneIcon from '../../../assets/images/icons/ui/done.svg';
-import CancelIcon from '../../../assets/images/icons/ui/cancel.svg';
-import {Link, useLocation} from "react-router-dom";
 
-export function Task({
-    id,
-    state,
-    description,
-    reward,
-    progress,
-    time
-}: ITask) {
-    const location = useLocation();
+
+export function TaskDetails() {
+    const { id } = useParams();
+    const tasks = useSelector(getTasks);
+    const task: ITask | undefined  = tasks.find(task => task.id === id);
+
+    if (!task) {
+        return <div> Такого задания не найдено </div>;
+    }
 
     return (
-        <Link
-            to={`/tasks/${id}`}
-            state={{
-                modal: true,
-            background: location
-            }}
-        >
+        <div className={styles.wrapper}>
+            <Text tag={'h2'} size={'Big'} color={'Main'} weight={'Semibold'}> {task.description} </Text>
             <div className={styles.task}>
-
-                {state === 'active' ?
+                {task.state === 'active' ?
                     <div className={`${styles.task__state}  ${styles.task__active}`}>
                         <Text tag={'p'} size={'Title'} color={'Invert'} weight={'Semibold'}>
                             {id}
                         </Text>
                     </div>
-                    : state === 'done' ?
+                    : task.state === 'done' ?
                         <div className={`${styles.task__state}  ${styles.task__done}`}>
                             <DoneIcon/>
                         </div>
@@ -43,42 +39,44 @@ export function Task({
                         </div>
                 }
 
-
                 <div>
                     <Text tag={'p'} size={'Standard'} color={'Main'} weight={'Regular'}>
-                        {description}
+                        {task.description}
                     </Text>
                 </div>
 
                 <div className={styles.task__reward}>
-                    {reward.coin > 0 &&
+                    {task.reward.coin > 0 &&
                         <div className={styles.task__reward_num}>
                             <IconCoin/>
                             <Text tag={'p'} size={'Standard'} color={'Main'} weight={'Bold'}>
-                                + {reward.coin}
+                                + {task.reward.coin}
                             </Text>
                         </div>}
-                    {reward.carma > 0 &&
+                    {task.reward.carma > 0 &&
                         <div className={styles.task__reward_num}>
                             <IconCarma/>
                             <Text tag={'p'} size={'Standard'} color={'Main'} weight={'Bold'}>
-                                + {reward.carma}
+                                + {task.reward.carma}
                             </Text>
                         </div>}
                 </div>
 
                 <div>
                     <Text tag={'p'} size={'Standard'} color={'Main'} weight={'Regular'}>
-                        {progress}
+                        {task.progress}
                     </Text>
                 </div>
 
                 <div>
                     <Text tag={'p'} size={'Standard'} color={'Main'} weight={'Regular'}>
-                        {time}
+                        {task.time}
                     </Text>
                 </div>
+
             </div>
-        </Link>
+            <Text tag={'p'} size={'Standard'} color={'Main'} weight={'Regular'}> {task.extraInfo} </Text>
+        </div>
+
     )
 }

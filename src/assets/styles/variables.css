@@ -3,6 +3,7 @@
     --main-color-04: rgba(255, 255, 255, 0.4);
     --main-color-dark: #F6F5FF;
     --main-color-darkest: #F0F0FF;
+    --main-color-light: #E4E1FF;
     --main-text-color: #1E1584;
 
     --secondary-color: #524E7D;
@@ -20,6 +21,8 @@
     --gradient-main: linear-gradient(to bottom, var(--main-color-dark),var(--main-color-darkest), var(--secondary-color-lighter));
     --gradient-ui: linear-gradient(to bottom, var(--secondary-color-lightest),var(--secondary-color-light), var(--secondary-color-dark));
     --gradient-ui-hover: linear-gradient(to bottom, var(--secondary-color),var(--secondary-color-light), var(--secondary-color-dark));
+
+    --gradient-background: linear-gradient(to bottom, var(--main-color-dark),var(--main-color-light));
 
     --gradient-ui-done: linear-gradient(to bottom, var(--color-ui-done-light),var(--color-ui-done-lightest));
     --gradient-ui-cancel: linear-gradient(to bottom, var(--color-ui-cancel-light),var(--color-ui-cancel-dark));

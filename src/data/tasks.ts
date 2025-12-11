@@ -2,7 +2,7 @@ import type {ITask} from "../types";
 
 export const initialTasks: ITask[] = [
     {
-        id: 1,
+        id: '1',
         description: 'Провести код-ревью',
         extraInfo: 'Дополнительное описание задачи',
         state: 'active',
@@ -14,7 +14,7 @@ export const initialTasks: ITask[] = [
         time: '2 дня'
     },
     {
-        id: 2,
+        id: '2',
         description: 'Завершить проект',
         extraInfo: 'Дополнительное описание задачи',
         state: 'active',
@@ -26,7 +26,7 @@ export const initialTasks: ITask[] = [
         time: '13.10.26'
     },
     {
-        id: 3,
+        id: '3',
         description: 'Завершить проект 2 dw dwd',
         extraInfo: 'Дополнительное описание задачи',
         state: 'done',
@@ -38,7 +38,7 @@ export const initialTasks: ITask[] = [
         time: '21.01.25'
     },
     {
-        id: 4,
+        id: '4',
         description: 'Обучение новых сотрудников',
         extraInfo: 'Дополнительное описание задачи',
         state: 'active',
@@ -50,7 +50,7 @@ export const initialTasks: ITask[] = [
         time: '5 дней'
     },
     {
-        id: 5,
+        id: '5',
         description: 'Обучение новых сотрудников',
         extraInfo: 'Дополнительное описание задачи',
         state: 'active',
@@ -62,7 +62,7 @@ export const initialTasks: ITask[] = [
         time: '5 дней'
     },
     {
-        id: 6,
+        id: '6',
         description: 'Обучение новых сотрудников',
         extraInfo: 'Дополнительное описание задачи',
         state: 'cancel',
@@ -74,7 +74,7 @@ export const initialTasks: ITask[] = [
         time: '5 дней'
     },
     {
-        id: 7,
+        id: '7',
         description: 'Обучение новых сотрудников 2',
         extraInfo: 'Дополнительное описание задачи',
         state: 'active',

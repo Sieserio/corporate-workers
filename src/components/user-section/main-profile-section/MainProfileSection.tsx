@@ -7,7 +7,7 @@ import {ProfileCarma} from "../../profile/profile-carma/ProfileCarma.tsx";
 import {ProfileTargetGoal} from "../../profile/profile-target-goal/ProfileTargetGoal.tsx";
 
 import {useAppDispatch, useAppSelector} from "../../../store/hooks.ts";
-import {fetchTasks} from "../../../store/tasksSlice.ts";
+import {fetchTasks} from "../../../store/slices/tasksSlice.ts";
 
 export function MainProfileSection() {
     const dispatch = useAppDispatch();
